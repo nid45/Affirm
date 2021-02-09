@@ -4,10 +4,10 @@ import com.affirm.takehome.data.Restaurant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-
+@Serializable
 data class YelpRestaurant(
-    @SerialName("id") override val id: String,
-    @SerialName("name") override val name: String,
-    @SerialName("image_url") override val image: String,
-    @SerialName("rating") override val rating: String
-) : Restaurant(id, name, image, rating)
+    @SerialName("id") val id: String,
+    @SerialName("name") val name: String,
+    @SerialName("image_url") val image: String,
+    @SerialName("rating") val rating: String
+)

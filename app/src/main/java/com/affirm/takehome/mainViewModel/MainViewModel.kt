@@ -8,8 +8,8 @@ import com.affirm.takehome.data.Restaurant
 class MainViewModel : ViewModel() {
     var restaurantList = MutableLiveData<MutableList<Restaurant>>()
 
-    fun init(list: MutableList<Restaurant>){
-        this.restaurantList.value = list
+    init{
+        this.restaurantList.value = mutableListOf()
     }
 
 

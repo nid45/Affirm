@@ -2,8 +2,7 @@ package com.affirm.takehome.data
 
 import kotlinx.serialization.Serializable
 
-@Serializable
-abstract class Restaurant(
+data class Restaurant(
         open val id: String,
         open val name: String,
         open val image: String,
