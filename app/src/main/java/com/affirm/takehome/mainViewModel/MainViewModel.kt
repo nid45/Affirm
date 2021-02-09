@@ -12,5 +12,9 @@ class MainViewModel : ViewModel() {
         this.restaurantList.value = mutableListOf()
     }
 
+    fun addRestaurants(list: List<Restaurant>){
+        restaurantList.value?.addAll(list)
+    }
+
 
 }

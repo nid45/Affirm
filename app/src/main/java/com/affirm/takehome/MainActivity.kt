@@ -213,6 +213,7 @@ class MainActivity : AppCompatActivity() {
                             yelpResponse.body()?.restaurants?.let { yelpToRestaurant(it) }
 
                     }
+
                     runOnUiThread {
                         viewPager.adapter?.notifyDataSetChanged()
                     }
@@ -241,9 +242,9 @@ class MainActivity : AppCompatActivity() {
                     restaurant.rating
             )
 
-            viewModel.restaurantList.value?.add(rest)
             temp.add(rest)
         }
+        viewModel.addRestaurants(temp)
         runOnUiThread {
             restaurantAdapter.addRestaurants(temp)
         }
@@ -267,9 +268,9 @@ class MainActivity : AppCompatActivity() {
                     restaurant.restaurantDetail.image,
                     restaurant.restaurantDetail.userRating.toString()
             )
-            viewModel.restaurantList.value?.add(rest)
             temp.add(rest)
         }
+        viewModel.addRestaurants(temp)
         runOnUiThread {
             restaurantAdapter.addRestaurants(temp)
         }
