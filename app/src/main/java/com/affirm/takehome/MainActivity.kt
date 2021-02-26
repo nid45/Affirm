@@ -285,7 +285,6 @@ class MainActivity : AppCompatActivity() {
      * @return no return value
      */
     fun getData(){
-        Log.i("fuck", isYelp.toString())
         if (isYelp) {//check if we are pulling from Yelp
             runBlocking{
                 withContext(Dispatchers.Default) {
